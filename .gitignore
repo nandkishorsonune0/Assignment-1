@@ -1,2 +1,9 @@
 generated/
 node_modules/
+.next/
+out/
+dist/
+coverage/
+*.log
+generated/
+node_modules/
