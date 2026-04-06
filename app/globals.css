@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f4f8ff;
+  --foreground: #0b1527;
+  --card: #ffffff;
+  --border: #d6e3ff;
+  --brand-700: #0f4cbd;
+  --brand-600: #155ee9;
+  --brand-500: #2f7dff;
+  --brand-dark: #0a1f52;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+body {
+  color: var(--foreground);
+  background:
+    radial-gradient(1000px 450px at 10% -10%, #dce9ff 0%, transparent 65%),
+    radial-gradient(1000px 450px at 100% -20%, #d8e6ff 0%, transparent 62%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-shell {
+  width: min(1160px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(214, 227, 255, 0.9);
+  box-shadow:
+    0 12px 30px rgba(21, 94, 233, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px);
+}
+
+.hero-orb {
+  animation: drift 10s ease-in-out infinite;
+}
+
+.hero-orb-delayed {
+  animation: drift 13s ease-in-out infinite reverse;
+}
+
+.soft-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 76, 189, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 76, 189, 0.07) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at center, #000 35%, transparent 85%);
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.04);
+  }
+}
